@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Lauren Studios — Yearbook Proof</title>
+<script>
+  // Forwards myseniorportraitproof.com/?t=CODE (or /CODE) to the proof page, keeping the student's code.
+  (function () {
+    var PAGE = 'https://script.google.com/macros/s/AKfycbzNzko5cnKEFn-qn0cd7UygloQALr6SI3RC4ZQtw1LBbSfi5zc0sJ2Ljhga4gWaCmEztg/exec';
+    var q = new URLSearchParams(location.search);
+    var p = location.pathname.replace(/^\/+|\/+$/g, '');
+    if (p.indexOf('.') >= 0) p = '';
+    var t = (q.get('t') || p).replace(/[^A-Fa-f0-9]/g, '').slice(0, 64);
+    var id = (q.get('id') || '').replace(/[^A-Za-z0-9-]/g, '');
+    var url = PAGE + (t ? '?t=' + t : (id ? '?id=' + encodeURIComponent(id) : ''));
+    location.replace(url);
+  })();
+</script>
+<style>body{font-family:Futura,Jost,Arial,sans-serif;background:#F2F2F2;color:#0C1C22;text-align:center;padding:60px 20px}a{color:#178CAB}</style>
+</head>
+<body>
+<p>Opening your yearbook proof…</p>
+<p><a href="https://script.google.com/macros/s/AKfycbzNzko5cnKEFn-qn0cd7UygloQALr6SI3RC4ZQtw1LBbSfi5zc0sJ2Ljhga4gWaCmEztg/exec">Tap here if it doesn't open</a></p>
+</body>
+</html>
